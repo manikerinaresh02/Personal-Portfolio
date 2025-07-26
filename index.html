@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+  <!-- Header / Navigation Bar -->
+  <header>
+    <nav class="bg-gray-900 text-white shadow-md navbar">
+      <div class="nav-logo">
+        <img src="image.jpg" alt="Naresh Manikeri logo" class="nav-avatar" />
+        <span class="nav-name" style="color: #ffff;">NARESH MANIKERI</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="searchToggle" aria-label="Search" style="display:none; background:none; border:none; cursor:pointer; margin-left:1rem;">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section (First Impression) -->
+  <section id="hero" class="reveal w-full max-w-4xl mx-auto px-4 py-12">
+    <div class="hero-content flex flex-col items-center justify-center text-center">
+      <div class="hero-text">
+        <h1 class="text-4xl font-bold mb-4 text-blue-400">
+          <span id="typewriter"></span>
+        </h1>
+        <h2 class="text-xl font-semibold mb-2 text-gray-300">Frontend Developer <span class="hero-divider text-white-400">|</span> Crafting immersive web experiences</h2>
+        <p class="mb-6 text-gray-400">I’m passionate about building beautiful, accessible, and high-performance web interfaces. I love turning ideas into interactive digital products that delight users.</p>
+        <div class="hero-cta flex flex-col sm:flex-row gap-4 justify-center mb-4">
+          <a href="#projects" class="bg-[#ffff] hover:bg-blue-500 text-gray-900 font-semibold py-2 px-6 shadow transition" style="border-radius: 0.5em;">View Projects</a>
+          <a href="https://drive.google.com/file/d/1elHTde0NCMP8h1CFrziTzoHiVB7N6TfK/view?usp=drive_link" class="bg-gray-800 hover:bg-gray-700 font-semibold py-2 px-6 shadow transition" style="color:#ffff; border-radius: 0.5em;" download target="_blank" rel="noopener noreferrer">Download Resume</a>
+          <a href="#contact" class="bg-gray-800 hover:bg-gray-700 font-semibold py-2 px-6 shadow transition" style="color:#ffff; border-radius: 0.5em;">Get in Touch</a>
+        </div>
+        <div class="hero-social flex gap-4 justify-center">
+          <a href="https://www.linkedin.com/in/manikerinaresh/" target="_blank" aria-label="LinkedIn" class="text-blue-400 hover:text-blue-300">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.29c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.29h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72z"/></svg>
+          </a>
+          <a href="https://github.com/manikerinaresh02" target="_blank" aria-label="GitHub" class="text-blue-400 hover:text-blue-300">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 012.9-.39c.98 0 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.7.42.36.79 1.09.79 2.2 0 1.59-.01 2.87-.01 3.26 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z"/></svg>
+          </a>
+          <a href="https://twitter.com/" target="_blank" aria-label="Twitter" class="text-blue-400 hover:text-blue-300">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 4.56c-.89.39-1.84.65-2.84.77a4.93 4.93 0 002.16-2.72c-.95.56-2 .97-3.13 1.19a4.92 4.92 0 00-8.39 4.48A13.97 13.97 0 013.15 3.15a4.92 4.92 0 001.52 6.57c-.8-.03-1.56-.25-2.22-.62v.06a4.93 4.93 0 003.95 4.83c-.39.11-.8.17-1.22.17-.3 0-.58-.03-.86-.08a4.93 4.93 0 004.6 3.42A9.87 9.87 0 012 19.54a13.94 13.94 0 007.56 2.22c9.05 0 14-7.5 14-14 0-.21 0-.42-.02-.63A9.93 9.93 0 0024 4.56z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="reveal">
+    <div class="about-container">
+      <div class="about-story">
+        <h1 style="font-size:2rem; font-weight: bold;">About Me</h1>
+        <p>My journey into frontend development began with a fascination for how design and technology intersect to create meaningful digital experiences. From building my first interactive webpage, I was hooked on the power of code to bring ideas to life. Over the years, I’ve honed my skills in HTML, CSS, and JavaScript, always striving to blend creativity with usability.</p>
+        <p>I thrive in collaborative environments where problem-solving and continuous learning are valued. Whether it’s brainstorming with a team, tackling a tricky bug, or exploring the latest design trends, I bring curiosity, adaptability, and a passion for excellence to every project.</p>
+        <div class="about-actions">
+          <a href="https://drive.google.com/file/d/1elHTde0NCMP8h1CFrziTzoHiVB7N6TfK/view?usp=drive_link" class="btn" download style="background:#ffff; color:black;" target="_blank" rel="noopener noreferrer">Download Resume</a>
+        </div>
+      </div>
+      <div class="about-skills">
+        <h2 style="background: rgba(255,255,255,0.08); border-radius: 0.5em; padding: 0.25em 0.8em; box-shadow: 0 2px 12px rgba(215, 86, 86, 0.08); display: inline-block; font-size: 2rem; font-weight: 700;">Key Skills</h2>
+        <div class="skills-group">
+          <div class="skill">
+            <span>HTML5</span>
+            <div class="progress-bar" style="background: #cfcece; border-radius: 8px; overflow: hidden; height: 16px; width: 100%; margin-top: 0.3rem;">
+              <div class="progress" style="background: #1a9b6a; height: 100%; width: 92%; border-radius: 8px;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>CSS3</span>
+            <div class="progress-bar" style="background: #cfcece; border-radius: 8px; overflow: hidden; height: 16px; width: 100%; margin-top: 0.3rem;">
+              <div class="progress" style="background: #1a9b6a; height: 100%; width: 90%; border-radius: 8px;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>JavaScript</span>
+            <div class="progress-bar" style="background: #cfcece; border-radius: 8px; overflow: hidden; height: 16px; width: 100%; margin-top: 0.3rem;">
+              <div class="progress" style="background: #1a9b6a; height: 100%; width: 85%; border-radius: 8px;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>Java</span>
+            <div class="progress-bar" style="background: #cfcece; border-radius: 8px; overflow: hidden; height: 16px; width: 100%; margin-top: 0.3rem;">
+              <div class="progress" style="background:#1a9b6a; height: 100%; width: 88%; border-radius: 8px;"></div>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Flexbox</span>
+            <span class="tag">Grid</span>
+            <span class="tag">Animations</span>
+            <span class="tag">Git</span>
+            <span class="tag">Figma</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="reveal w-full max-w-4xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold mb-8 text-center" style="color: #fff;">My Skillset</h2>
+    <div id="skills-section" class="space-y-10"></div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="reveal">
+    <h2 class="text-3xl font-bold mb-8 text-center" style="color: #fff;">Projects</h2>
+    <!-- Optional: Filter bar (hidden for now) -->
+    <div class="projects-filter" style="display:none;">
+      <button class="filter-btn active">All</button>
+      <button class="filter-btn">React</button>
+      <button class="filter-btn">Vanilla JS</button>
+      <button class="filter-btn">Full-Stack</button>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-carousel">
+          <button class="carousel-arrow left" aria-label="Previous image">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="carousel-images">
+            <img src="port1.png" alt="Screenshot 1 of Portfolio Website project" class="carousel-img active" loading="lazy">
+            <img src="port2.png" alt="Screenshot 2 of Portfolio Website project" class="carousel-img" loading="lazy">
+            <img src="port3.png" alt="Screenshot 3 of Portfolio Website project" class="carousel-img" loading="lazy">
+          </div>
+          <button class="carousel-arrow right" aria-label="Next image">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+          </button>
+          <div class="carousel-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3>Portfolio Website</h3>
+          <p>A personal portfolio website to showcase my frontend skills, projects, and contact information. Features a modern responsive design, dark mode, and interactive UI elements.<br>Built with accessibility in mind and optimized for fast loading.<br>Integrated smooth scrolling and section reveal animations for enhanced user experience.</p>
+          <div class="project-tech">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/manikerinaresh02/Personal-Portfolio" target="_blank" class="btn btn-github-custom">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-carousel">
+          <button class="carousel-arrow left" aria-label="Previous image">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="carousel-images">
+            <img src="weather1.png" alt="Screenshot 1 of Weather App project" class="carousel-img active" loading="lazy">
+            <img src="weather2.png" alt="Screenshot 2 of Weather App project" class="carousel-img" loading="lazy">
+            <img src="weather3.png" alt="Screenshot 3 of Weather App project" class="carousel-img" loading="lazy">
+          </div>
+          <button class="carousel-arrow right" aria-label="Next image">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+          </button>
+          <div class="carousel-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3>Weather App</h3>
+          <p>A simple weather application that fetches real-time weather data for any city using a public API. Includes animated weather icons and a clean, responsive UI.<br>Utilizes the OpenWeather API for accurate and up-to-date weather information.<br>Implements error handling for invalid city names and displays user-friendly alerts.</p>
+          <div class="project-tech">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/manikerinaresh02/Realtime-WeatherAPI" target="_blank" class="btn btn-github-custom">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-carousel">
+          <button class="carousel-arrow left" aria-label="Previous image">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="carousel-images">
+            <img src="Picture1.jpg" alt="Screenshot 1 of Task Manager App project" class="carousel-img active" loading="lazy">
+            <img src="Picture2.jpg" alt="Screenshot 2 of Task Manager App project" class="carousel-img" loading="lazy">
+            <img src="Picture3.jpg" alt="Screenshot 3 of Task Manager App project" class="carousel-img" loading="lazy">
+          </div>
+          <button class="carousel-arrow right" aria-label="Next image">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+          </button>
+          <div class="carousel-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3>Security of ML model</h3>
+          <p>A machine learning security project that protects ML models from adversarial attacks through input validation, model hardening, and threat detection mechanisms. Features secure deployment and real-time monitoring to maintain model integrity.</p>
+          <div class="project-tech">
+            <span class="tag">Python</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">Security</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/manikerinaresh02/ML-model" target="_blank" class="btn btn-github-custom">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <!-- Add more project cards here -->
+    </div>
+  </section>
+
+  <!-- Experience/Education Section -->
+  <section id="experience" class="reveal">
+    <h2>Experience & Education</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-logo"><img src="https://media.cakeresume.com/image/upload/s--G0ZEDWiW--/c_pad,fl_png8,h_400,w_400/v1690610004/gdvljgmtcbsiglzxd0oe.png" alt="Tech Solutions Inc. logo" loading="lazy"></div>
+        <div class="timeline-content">
+          <h3>Web Developer</h3>
+          <span class="timeline-place">Bharat Intern</span> <span class="timeline-date"> May 2024 – June 2024</span>
+          <p>During my internship, I developed a responsive personal portfolio website showcasing skills, projects, and professional experience using HTML, CSS, and JavaScript. Additionally, I built a real-time weather application using OpenWeather API that displays current weather conditions, forecasts, and location-based data. Throughout these projects, I implemented modern UI/UX design principles with responsive layouts and interactive elements for optimal user experience. This experience provided me with hands-on practice in API integration, data handling, and front-end development best practices.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTguHsnsf732Yf9Oiv_kM11-Tj8tgJeFFIJug&s" alt="State University logo" loading="lazy"></div>
+        <div class="timeline-content">
+          <h3>Bachelor of Technology in Information Technology</h3>
+          <span class="timeline-place">Marri Laxman Reddy Institute of Technology and Management</span> <span class="timeline-date">2021 – 2025</span>
+          <p>Completed my graduation in 2025 with a 7.5 CGPA in Information Technology from Marri Laxman Reddy Institute of Technology and Management, located at Dunigal, Medchal, Hyderabad. Throughout my academic journey, I maintained consistent performance and developed strong technical skills in programming and software development. I actively participated in coding clubs and technical workshops, which helped me stay updated with the latest industry trends and technologies. My coursework included hands-on projects and collaborative assignments that strengthened my problem-solving abilities and teamwork. These experiences have equipped me with a solid foundation in IT and prepared me to take on real-world challenges in the tech industry.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="reveal">
+    <h2>Contact</h2>
+    <form id="contactForm" action="https://formspree.io/f/mvgqavbe" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn primary">Send Message</button>
+    </form>
+    <div id="formSuccess" style="display:none;color:var(--accent);margin-top:1rem;font-weight:600;">Thank you! Your message has been sent.</div>
+    <div id="formError" style="display:none;color:#e74c3c;margin-top:1rem;font-weight:600;">Sorry, there was an error sending your message. Please try again.</div>
+      <div class="contact-direct">
+      <span style="color:var(--accent);font-weight:700;font-size:1.1rem;cursor:pointer;" onclick="copyEmail()">Email: manikerin@gmail.com</span>
+    </div>
+    <div class="contact-social">
+      <a href="https://www.linkedin.com/in/manikerinaresh/" target="_blank" aria-label="LinkedIn"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.29c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.29h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72z"/></svg></a>
+      <a href="https://github.com/manikerinaresh02" target="_blank" aria-label="GitHub"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 012.9-.39c.98 0 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.7.42.36.79 1.09.79 2.2 0 1.59-.01 2.87-.01 3.26 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z"/></svg></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <span>&copy; <span id="year"></span> Naresh Manikeri. All rights reserved.<br>Designed & developed with passion and creativity.</span>
+      <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+      </script>
+    </div>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+  <script>
+  const typewriterText = "HEY, I'M NARESH MANIKERI";
+  const typewriterEl = document.getElementById('typewriter');
+  let twIndex = 0;
+  function typeWriter() {
+    if (twIndex <= typewriterText.length) {
+      typewriterEl.textContent = typewriterText.slice(0, twIndex);
+      twIndex++;
+      setTimeout(typeWriter, 70);
+    }
+  }
+  typeWriter();
+</script>
+<script>
+const skillData = [
+  {
+    categoryName: "Programming Languages",
+    skills: [
+      { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", proficiency: 85 },
+      { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", proficiency: 92 },
+      { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", proficiency: 90 },
+      { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", proficiency: 88 }
+    ]
+  },
+  {
+    categoryName: "Frameworks & Libraries",
+    skills: [
+      { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", proficiency: 80 },
+      { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg", proficiency: 75 },
+      { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", proficiency: 70 }
+    ]
+  },
+  {
+    categoryName: "Tools & Software",
+    skills: [
+      { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg", proficiency: 90 },
+      { name: "Cursor", icon: "cursor.png", proficiency: 85 },
+      { name: "Lovable", icon: "lovable.jpeg", proficiency: 80 },
+      { name: "Bolt", icon: "bolt.jpg", proficiency: 75 }
+    ]
+  }
+];
+
+const skillsSection = document.getElementById('skills-section');
+skillsSection.innerHTML = skillData.map(category => `
+  <div>
+    <h3 class="text-xl font-semibold mb-4" style="color: #fff;">${category.categoryName}</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      ${category.skills.map(skill => `
+        <div class="flex items-center space-x-4 p-4 bg-gray-800 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
+          <div class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full">
+            <img src="${skill.icon}" alt="${skill.name} Icon" class="w-7 h-7">
+          </div>
+          <div class="flex-1">
+            <span class="block font-medium text-white">${skill.name}</span>
+            <div class="w-full bg-gray-700 rounded-full h-2 mt-1 overflow-hidden">
+              <div class="bg-blue-400 h-2 rounded-full transition-all duration-700" style="width: 0%;" data-proficiency="${skill.proficiency}"></div>
+            </div>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  </div>
+`).join('');
+
+// Animate proficiency bars on load
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('[data-proficiency]').forEach(bar => {
+    setTimeout(() => {
+      bar.style.width = bar.getAttribute('data-proficiency') + '%';
+    }, 200);
+  });
+});
+</script>
+  <button id="backToTop" title="Back to Top" style="display:none;position:fixed;bottom:32px;right:32px;z-index:1000;padding:0.7em 1.1em;border:2px solid var(--accent);border-radius:50%;background:#1a1a1a;color:var(--accent);font-size:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.15);cursor:pointer;transition:background 0.2s,transform 0.2s;">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+  <script>
+    // Show/hide back to top button
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.style.display = 'block';
+      } else {
+        backToTopBtn.style.display = 'none';
+      }
+    });
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+  <script>
+  function copyEmail() {
+    navigator.clipboard.writeText('manikerin@gmail.com').then(function() {
+      alert('Email copied to clipboard!');
+    }, function(err) {
+      console.error('Could not copy text: ', err);
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+    const formError = document.getElementById('formError');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Simple validation
+        const name = contactForm.name.value.trim();
+        const email = contactForm.email.value.trim();
+        const message = contactForm.message.value.trim();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!name || !email || !message) {
+          alert('Please fill in all fields.');
+          return;
+        }
+        if (!emailPattern.test(email)) {
+          alert('Please enter a valid email address.');
+          return;
+        }
+        // Submit to Formspree
+        const formData = new FormData(contactForm);
+        fetch(contactForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        })
+        .then(response => {
+          console.log('Formspree response:', response);
+          if (response.ok) {
+            contactForm.reset();
+            formSuccess.style.display = 'block';
+            formError.style.display = 'none';
+            setTimeout(() => { formSuccess.style.display = 'none'; }, 4000);
+          } else {
+            response.json().then(data => {
+              console.log('Formspree error data:', data);
+            });
+            throw new Error('Network response was not ok');
+          }
+        })
+        .catch(error => {
+          formError.style.display = 'block';
+          formSuccess.style.display = 'none';
+          setTimeout(() => { formError.style.display = 'none'; }, 4000);
+          console.error('Form submission error:', error);
+        });
+      });
+    }
+  });
+  </script>
+</body>
+</html> 
