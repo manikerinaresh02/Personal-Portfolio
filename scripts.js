@@ -116,4 +116,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
-// --- PROJECT CAROUSEL LOGIC END --- 
+// --- PROJECT CAROUSEL LOGIC END ---
+
+// --- MOBILE MENU LOGIC START ---
+document.addEventListener('DOMContentLoaded', function() {
+  const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+  
+  if (mobileMenuToggle && navLinks) {
+    mobileMenuToggle.addEventListener('click', function() {
+      mobileMenuToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+    
+    // Close menu when clicking on a link
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function() {
+        mobileMenuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!mobileMenuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+        mobileMenuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+      }
+    });
+  }
+});
+// --- MOBILE MENU LOGIC END --- 
